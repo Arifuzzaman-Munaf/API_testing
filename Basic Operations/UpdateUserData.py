@@ -17,8 +17,8 @@ print("printing the json file ==>", json_request)
 
 print("____________________________________________")
 
-"""make POST request to send data from JSON file"""
-response = requests.post(url, json_request)
+"""make PUT request to send data from JSON file"""
+response = requests.put(url, json_request)
 print("Contents ==>", response.content)
 
 print("____________________________________________")
@@ -32,7 +32,7 @@ print("____________________________________________")
 print('Content-Type', response.headers.get('Content-Type'))
 
 """validating response code for POST method"""
-assert response.status_code == 201
+assert response.status_code == 200
 
 
 """Parse response to JSON format"""
@@ -41,5 +41,5 @@ Json_response = json.loads(response.text)
 
 print("____________________________________________")
 """Pick ID for json path"""
-id = jsonpath.jsonpath(Json_response, 'id')
-print(*id)
+update_info = jsonpath.jsonpath(Json_response, 'updatedAt')
+print(*update_info)
