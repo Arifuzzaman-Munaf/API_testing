@@ -4,7 +4,7 @@ import jsonpath
 
 
 """API Url"""
-url = "https://reqres.in/api/users"
+url = "https://reqres.in/api/users/2"
 
 """Read Input from Json file"""
 file = open('NewUser.json', 'r')
