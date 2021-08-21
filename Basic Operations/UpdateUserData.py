@@ -7,7 +7,7 @@ import jsonpath
 url = "https://reqres.in/api/users/2"
 
 """Read Input from Json file"""
-file = open('NewUser.json', 'r')
+file = open('UpdateUser.json', 'r')
 json_input = file.read()
 
 """Parse json input to Json format"""
